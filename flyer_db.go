@@ -47,10 +47,10 @@ func Run(router func(r *gin.Engine)) {
 	}
 	r := gin.New()
 	r.SetTrustedProxies(nil)
-	router(r)
 	if config.App.Swagger {
 		r.GET("/swagger/*any", ginSwagger.WrapHandler(swaggerfiles.Handler))
 	}
+	router(r)
 	r.Run(fmt.Sprintf(":%v", config.App.Port))
 }
 

@@ -61,7 +61,7 @@ redis:
   db: 0
 mysql:
   uri: "root:123456@tcp(localhost:3306)/user?charset=utf8&parseTime=True&loc=Local&multiStatements=true"
-  TablePrefix: "wed_"
+  TablePrefix: "flyer_"
 jwt:
   secret: "werwer2323224e4W"
   #签发方
